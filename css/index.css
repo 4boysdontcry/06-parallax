@@ -21,7 +21,7 @@ aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 .header-wrapper > .navi-wrap {float: left;}
 .header-wrapper > .navi-wrap > .navi {float: left;}
 .header-wrapper > .navi-wrap > .navi:hover {background-color: #ccc; color: #111;}
-.header-wrapper > .navi-wrap > .navi > a {padding: 1em;}    /* 호버시 꽉차게 색차는거 글씨에 패딩*/
+.header-wrapper > .navi-wrap > .navi > a {padding: 1em;}    /* 호버시 꽉차게 색차는거 글씨에 패딩줘야함*/
 .header-wrapper > .navi-wrap > .navi > a > .fa {margin-right: .25em;}
 .header-wrapper > .search {float: right; padding: 1em; cursor: pointer;}
 .header-wrapper > .search:hover {background-color: #f44336; color: #f9f9f9;}
@@ -38,7 +38,7 @@ aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 /******************main*******************/
 .main-wrapper {width: 100%; height: 100vh; background: url(../img/parallax1.jpg) no-repeat center / cover; background-attachment: fixed;
     display: table;}  /* background-attachment: fixed; 백그라운드 이미지 고정 */
-.main-wrapper > .main-wrap {background-color: rgba(255, 255, 255, .25); display: table-cell; text-align: center; vertical-align: middle;} /* table-cell은 table의 100%로 찬다 */
+.main-wrapper > .main-wrap {background-color: rgba(255, 255, 255, .25); display: table-cell; text-align: center; vertical-align: middle;} /* table-cell은 table 영역의 100%로 찬다 */
 .main-wrapper > .main-wrap > h1.logo {background-color: #111; color: #f9f9f9; display: inline-block; font-size: 1.5em; padding: .5em .75em; letter-spacing: .325em;}
 
 
