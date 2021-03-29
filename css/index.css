@@ -3,8 +3,17 @@
 
 
 /******************common*******************/
-html, body {font-family: 'Lato', sans-serif; height: 8000px;}
+html, body {font-family: 'Lato', sans-serif; color: #111; height: 8000px;}
+.wrapper {max-width: 960px; margin: auto;}
+section.wrapper {padding: 5em 1em;}
+section.wrapper > .title {color: #777; text-align: center;}
+section.wrapper > h2.title {font-size: 1.5em; margin-bottom: 1.25em;}
+section.wrapper > h3.title {font-style: italic; margin-bottom: 1.5em; line-height: 1.5;}
 
+aside.title-bar {font-size: 2em; letter-spacing: .325em; color: #f9f9f9; text-align: center; padding: 5em 0; background-position: center;
+    background-repeat: no-repeat; background-size: cover; background-attachment: fixed;}
+aside.title-bar.pf-bar{background-image: url(../img/parallax2.jpg);}
+aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 
 
 /******************header*******************/
@@ -16,14 +25,21 @@ html, body {font-family: 'Lato', sans-serif; height: 8000px;}
 .header-wrapper > .navi-wrap > .navi > a > .fa {margin-right: .25em;}
 .header-wrapper > .search {float: right; padding: 1em; cursor: pointer;}
 .header-wrapper > .search:hover {background-color: #f44336; color: #f9f9f9;}
+.header-wrapper > .mo-bars {float: right; padding: 1em; cursor: pointer; display: none;}
+.header-wrapper > .mo-bars:hover {background-color: #111; color: #f9f9f9;}
 
-.header-wrapper.active {background-color: #fff; color: #111; box-shadow: 0 0 8px rgba(0, 0, 0, .5);}
+.header-wrapper.active {background-color: #fff; color: #111; box-shadow: 0 0 8px rgba(0, 0, 0, .5); transition: transform .5s; transition-timing-function: linear;}
+
+.monavi-wrapper {width: 100%; position: fixed; background-color: #fff; top: 48px; display: none;}
+.monavi-wrapper > .monavi {padding: 1em;}
+.monavi-wrapper > .monavi:hover {background-color: #eee;}
 
 
 /******************main*******************/
-.main-wrapper {height: 100vh; background: url(../img/parallax1.jpg) no-repeat center / cover; background-attachment: fixed;}  /* background-attachment: fixed; 백그라운드 이미지 고정 */
-.main-wrapper > .main-wrap {width: 100%; height: 100%; background-color: rgba(255, 255, 255, .25);}
-
+.main-wrapper {width: 100%; height: 100vh; background: url(../img/parallax1.jpg) no-repeat center / cover; background-attachment: fixed;
+    display: table;}  /* background-attachment: fixed; 백그라운드 이미지 고정 */
+.main-wrapper > .main-wrap {background-color: rgba(255, 255, 255, .25); display: table-cell; text-align: center; vertical-align: middle;} /* table-cell은 table의 100%로 찬다 */
+.main-wrapper > .main-wrap > h1.logo {background-color: #111; color: #f9f9f9; display: inline-block; font-size: 1.5em; padding: .5em .75em; letter-spacing: .325em;}
 
 
 /******************about*******************/
@@ -63,10 +79,16 @@ html, body {font-family: 'Lato', sans-serif; height: 8000px;}
 
 
 @media (max-width: 768px){
+.header-wrapper > .search {display: none;}
+.header-wrapper > .mo-bars {display: block;}
+.header-wrapper > .navi-wrap > .navi:not(:first-child) {display: none;}
+.monavi-wrapper.active {display: block;}
 
 }
 
 
 @media (max-width: 576px){
+.main-wrapper > .main-wrap > h1.logo > span {display: none;}
+
 
 }
