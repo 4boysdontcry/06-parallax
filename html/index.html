@@ -1,3 +1,16 @@
+<!-- 래퍼 순서
+    .gnb-wrapper
+    .gnb-wrapper > .wrapper
+    .gnb-wrapper > .wrapper > .outwrap
+    .gnb-wrapper > .wrapper > .outwrap > .inwrap
+    .gnb-wrapper > .wrapper > .outwrap > .inwrap > .wrap
+
+    .contact-wrapper
+    .contact-wrapper > .contact-outwrap
+    .contact-wrapper > .contact-outwrap > .contact-inwrap
+    .contact-wrapper > .contact-outwrap > .contact-inwrap > contact-wrap
+-->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,16 +29,16 @@
 <header class="header-wrapper clearfix">
     <ul class="navi-wrap">
         <li class="navi"><a href="#">HOME</a></li>
-        <li class="navi"><a href="#"><i class="fa fa-user"></i>ABOUT</a></li>
-        <li class="navi"><a href="#"><i class="fa fa-th"></i>PORTFOLIO</a></li>
-        <li class="navi"><a href="#"><i class="fa fa-envelope"></i>CONTACT</a></li>
+        <li class="navi"><a href="#about"><i class="fa fa-user"></i>ABOUT</a></li>
+        <li class="navi"><a href="#pf"><i class="fa fa-th"></i>PORTFOLIO</a></li>
+        <li class="navi"><a href="#contact"><i class="fa fa-envelope"></i>CONTACT</a></li>
     </ul>
     <i class="search fa fa-search"></i>
     <i class="mo-bars fa fa-bars"></i>
 </header>
 <ul class="monavi-wrapper">
     <li class="monavi"><a href="#about">ABOUT</a></li>
-    <li class="monavi"><a href="#pf"></a>PORTFOLIO</li>
+    <li class="monavi"><a href="#pf">PORTFOLIO</a></li>
     <li class="monavi"><a href="#contact">CONTACT</a></li>
     <li class="monavi"><a href="#">SEARCH</a></li>
 </ul>
@@ -40,7 +53,7 @@
 
 
 <!-- about wrapper -->
-<section class="about-wrapper wrapper">
+<section class="about-wrapper wrapper" id="about">
     <h2 class="title">ABOUT</h2>
     <h3 class="title">I love photography</h3>
     <p>
@@ -64,19 +77,19 @@
             <li class="skill">
                 <h5 class="title"><i class="fa fa-camera"></i> Photography</h5>
                 <div class="bar-wrap">
-                    <div class="bar">90%</div>
+                    <div class="bar"><span>90%</span></div>
                 </div>
             </li>
             <li class="skill">
                 <h5 class="title"><i class="fa fa-laptop"></i> Web Design</h5>
                 <div class="bar-wrap">
-                    <div class="bar">85%</div>
+                    <div class="bar"><span>85%</span></div>
                 </div>
             </li>
             <li class="skill">
                 <h5 class="title"><i class="fa fa-image"></i> Photoshop</h5>
                 <div class="bar-wrap">
-                    <div class="bar">70%</div>
+                    <div class="bar"><span>70%</span></div>
                 </div>
             </li>
         </ul>
@@ -86,12 +99,29 @@
 
 <!-- client bar -->
 <aside class="client-bar">
-    
+    <ul class="client-wrap clearfix">
+        <li class="client">
+            <h3 class="count">14+</h3>
+            <h4 class="title">Partners</h4>
+        </li>
+        <li class="client">
+            <h3 class="count">55+</h3>
+            <h4 class="title">Projects Done</h4>
+        </li>
+        <li class="client">
+            <h3 class="count">89+</h3>
+            <h4 class="title">Happy Clients</h4>
+        </li>
+        <li class="client">
+            <h3 class="count">150+</h3>
+            <h4 class="title">Meetings</h4>
+        </li>
+    </ul>
 </aside>
 
 
 <!-- pf-bar -->
-<aside class="pf-bar title-bar">
+<aside class="pf-bar title-bar" id="pf">
     PORTFOLIO
 </aside>
 
@@ -101,11 +131,23 @@
     <h2 class="title">MY WORK</h2>
     <h3 class="title">Here are some of my latest lorem work ipsum tipsum. <br>
     Click on the images to make them bigger</h3>
+    <!-- ul.pf-wrap>li.pf*8>img[src=../img/p$.jpg alt=pf].img -->
+    <ul class="pf-wrap clearfix">
+        <li class="pf"><img src="../img/p1.jpg" alt="The mist over the mountains" class="img"></li>
+        <li class="pf"><img src="../img/p2.jpg" alt="Coffee beans" class="img"></li>
+        <li class="pf"><img src="../img/p3.jpg" alt="Bear closeup" class="img"></li>
+        <li class="pf"><img src="../img/p4.jpg" alt="Quiet ocean" class="img"></li>
+        <li class="pf"><img src="../img/p5.jpg" alt="The mist" class="img"></li>
+        <li class="pf"><img src="../img/p6.jpg" alt="My beloved typewriter" class="img"></li>
+        <li class="pf"><img src="../img/p7.jpg" alt="Empty ghost train" class="img"></li>
+        <li class="pf"><img src="../img/p8.jpg" alt="Sailing" class="img"></li>
+    </ul>
+    <button class="bt-more">LOAD MORE</button>
 </section>
 
 
 <!-- contact bar -->
-<aside class="contact-bar title-bar">
+<aside class="contact-bar title-bar" id="contact">
     CONTACT
 </aside>
 
@@ -113,14 +155,51 @@
 <!-- contact wrapper -->
 <section class="contact-wrapper wrapper">
     <h2 class="title">WHERE I WORK</h2>
-    <h3 class="title">I'd love your feedback!</h3> 
+    <h3 class="title">I'd love your feedback!</h3>
+    <div class="contact-outwrap clearfix">
+        <div class="loc-inwrap">
+            <img src="../img/map.jpg" alt="위치" class="img">
+        </div>
+        <div class="info-inwrap">
+            <ul class="info-wrap">
+                <li class="info"><i class="fa fa-map-marker-alt"></i>Chicago, US</li>
+                <li class="info"><i class="fa fa-phone-alt"></i>Phone: <a href="tel:+00 151515">+00 151515</a></li>
+                <li class="info"><i class="fa fa-envelope"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+            </ul>
+            <p class="desc-wrap">Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+            <form action="#" class="form-wrap clearfix">
+                <input type="text" class="input-text" name="name" placeholder="Name">
+                <input type="text" class="input-text" name="email" placeholder="Email">
+                <input type="text" class="input-text" name="msg" placeholder="Message">
+                <button><i class="fa fa-paper-plane"></i>SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 
 <!-- footer wrapper -->
 <footer class="footer-wrapper">
-    
+    <a href="#" class="bt-top"><i class="fa fa-arrow-up"></i>To the top</a>
+    <ul class="sns-wrap">
+        <li class="sns"><a href="#" class="sns fab fa-facebook"></a></li>
+        <li class="sns"><a href="#" class="sns fab fa-instagram"></a></li>
+        <li class="sns"><a href="#" class="sns fab fa-snapchat"></a></li>
+        <li class="sns"><a href="#" class="sns fab fa-pinterest"></a></li>
+        <li class="sns"><a href="#" class="sns fab fa-twitter"></a></li>
+        <li class="sns"><a href="#" class="sns fab fa-linkedin"></a></li>
+    </ul>
+    <p class="copyright">Powered by <a href="#">w3.css</a></p>
 </footer>
+
+<!-- footer wrapper -->
+<aside class="modal-wrapper">
+    <div class="modal-wrap">
+        <img src="" alt="modal-img" class="modal-img img">
+        <h3 class="modal-title"></h3>
+    </div>
+    <i class="fa fa-times modal-close"></i>
+</aside>
 
 <script src="../js/index.js"></script>
 </body>
