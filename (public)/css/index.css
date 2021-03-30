@@ -168,7 +168,6 @@ aside.title-bar.contact-bar {background-image: url(../img/parallax3.jpg);}
 	aside.title-bar {background-attachment: scroll;}
 	.main-wrapper {background-attachment: scroll;}
 }
-}
 
 
 @media (max-width: 576px) {
@@ -176,6 +175,4 @@ aside.title-bar.contact-bar {background-image: url(../img/parallax3.jpg);}
 	.pf-wrapper > .pf-wrap > .pf {width: 98%;}
 	.contact-wrapper > .contact-outwrap > .info-inwrap > .form-wrap > input[name='name'] {width: 100%;}
 	.contact-wrapper > .contact-outwrap > .info-inwrap > .form-wrap > input[name='email'] {width: 100%;}
-
-
-
+}
