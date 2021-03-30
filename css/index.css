@@ -3,12 +3,14 @@
 
 
 /******************common*******************/
-html, body {font-family: 'Lato', sans-serif; color: #111; height: 8000px;}
+html, body {font-family: 'Lato', sans-serif; color:  #777;line-height: 1.5; height: 8000px;}
 .wrapper {max-width: 960px; margin: auto;}
 section.wrapper {padding: 5em 1em;}
-section.wrapper > .title {color: #777; text-align: center;}
+section.wrapper > .title { text-align: center;}
 section.wrapper > h2.title {font-size: 1.5em; margin-bottom: 1.25em;}
-section.wrapper > h3.title {font-style: italic; margin-bottom: 1.5em; line-height: 1.5;}
+section.wrapper > h3.title {font-style: italic; margin-bottom: 1.5em;}
+section.wrapper > p.content {margin-bottom: 1.5em;}
+
 
 aside.title-bar {font-size: 2em; letter-spacing: .325em; color: #f9f9f9; text-align: center; padding: 5em 0; background-position: center;
     background-repeat: no-repeat; background-size: cover; background-attachment: fixed;}
@@ -17,7 +19,7 @@ aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 
 
 /******************header*******************/
-.header-wrapper {color: #777; position: fixed; width: 100%; z-index: 9;}
+.header-wrapper {color: #777; position: fixed; width: 100%; z-index: 9; line-height: 1;}
 .header-wrapper > .navi-wrap {float: left;}
 .header-wrapper > .navi-wrap > .navi {float: left;}
 .header-wrapper > .navi-wrap > .navi:hover {background-color: #ccc; color: #111;}
@@ -43,8 +45,25 @@ aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 
 
 /******************about*******************/
+.about-wrapper {text-align: justify;}
+.about-wrap {margin-bottom: 2em;}
+.about-wrap > div {width: 50%; float: left; padding: 1em;}
+.about-wrap > .photo-wrap {text-align: center;}
+.about-wrap > .photo-wrap > .name {margin-bottom: 2em;}
+.about-wrap > .photo-wrap > .photo {border-radius: 5px; overflow: hidden;}
+.about-wrap > .photo-wrap > .photo > img {transition: all .5s;}
+.about-wrap > .photo-wrap > .photo:hover > img {transform: scale(1.1);}
 
-
+.skill-wrapper {}
+.skill-wrapper > .title {text-align: center; font-size: 1.125em; margin-bottom: 2em;}
+.skill-wrapper > .skill-wrap {}
+.skill-wrapper > .skill-wrap > .skill {margin-bottom: 1.5em;}
+.skill-wrapper > .skill-wrap > .skill > .title {letter-spacing: .5em; margin-bottom: .75em;}
+.skill-wrapper > .skill-wrap > .skill > .bar-wrap {background-color: #eee;}
+.skill-wrapper > .skill-wrap > .skill > .bar-wrap > .bar {background-color: #444; color: #f9f9f9; text-align: center; padding: .5em;}
+.skill-wrapper > .skill-wrap > .skill:nth-child(1) > .bar-wrap > .bar {width: 95%;}
+.skill-wrapper > .skill-wrap > .skill:nth-child(2) > .bar-wrap > .bar {width: 85%;}
+.skill-wrapper > .skill-wrap > .skill:nth-child(3) > .bar-wrap > .bar {width: 70%;}
 
 /******************pf*******************/
 
@@ -74,15 +93,15 @@ aside.title-bar.contact-bar{background-image: url(../img/parallax3.jpg);}
 
 
 @media (max-width: 992px){
-
 }
 
 
 @media (max-width: 768px){
-.header-wrapper > .search {display: none;}
-.header-wrapper > .mo-bars {display: block;}
-.header-wrapper > .navi-wrap > .navi:not(:first-child) {display: none;}
-.monavi-wrapper.active {display: block;}
+    .header-wrapper > .search {display: none;}
+    .header-wrapper > .mo-bars {display: block;}
+    .header-wrapper > .navi-wrap > .navi:not(:first-child) {display: none;}
+    .monavi-wrapper.active {display: block;}
+    .about-wrap > div {width: 100%;}
 
 }
 
